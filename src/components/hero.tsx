@@ -9,6 +9,12 @@ const clamp = (value: number, min: number, max: number) =>
 export function Hero() {
   const backgroundRef = useRef<HTMLDivElement>(null);
   const [motionEnabled, setMotionEnabled] = useState(false);
+  const [flashActive, setFlashActive] = useState(false);
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => setFlashActive(true), 50);
+    return () => window.clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     const updateCover = () => {
@@ -75,7 +81,7 @@ export function Hero() {
       onPointerLeave={resetPointer}
     >
       <div className="hero-backdrop" ref={backgroundRef} aria-hidden="true" />
-      <div className="hero-flash" aria-hidden="true" />
+      <div className={`hero-flash${flashActive ? " is-active" : ""}`} aria-hidden="true" />
       <div className="hero-topline">
         <div className="hero-topline-left">
           <span>ESTUDIO FOTOGRÁFICO</span>
