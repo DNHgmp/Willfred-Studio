@@ -7,8 +7,14 @@ const clamp = (value: number, min: number, max: number) =>
   Math.min(max, Math.max(min, value));
 
 export function Hero() {
-  const backgroundRef = useRef<HTMLDivElement>(null);
+  const backgroundRef = useRef<HTMLImageElement>(null);
   const [motionEnabled, setMotionEnabled] = useState(false);
+  const [flashActive, setFlashActive] = useState(false);
+
+  useEffect(() => {
+    const background = backgroundRef.current;
+    if (background?.complete && background.naturalWidth > 0) setFlashActive(true);
+  }, []);
 
   useEffect(() => {
     const updateCover = () => {
@@ -74,8 +80,16 @@ export function Hero() {
       onPointerMove={handlePointerMove}
       onPointerLeave={resetPointer}
     >
-      <div className="hero-backdrop" ref={backgroundRef} aria-hidden="true" />
-      <div className="hero-flash" aria-hidden="true" />
+      <img
+        className="hero-backdrop"
+        ref={backgroundRef}
+        src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&amp;fit=crop&amp;w=2000&amp;q=85"
+        alt=""
+        aria-hidden="true"
+        fetchPriority="high"
+        onLoad={() => setFlashActive(true)}
+      />
+      <div className={`hero-flash${flashActive ? " is-active" : ""}`} aria-hidden="true" />
       <div className="hero-topline">
         <div className="hero-topline-left">
           <span>ESTUDIO FOTOGRÁFICO</span>
