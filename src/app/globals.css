@@ -22,7 +22,7 @@ button { cursor: pointer; }
 ::selection { color: var(--night); background: var(--gold); }
 
 .hero { position: relative; z-index: 1; width: 100%; height: 100svh; min-height: 640px; overflow: hidden; isolation: isolate; background: #171714; opacity: calc(1 - var(--cover-progress)); transform: translateY(calc(var(--cover-progress) * -5vh)); }
-.hero-backdrop { position: absolute; inset: -24px; z-index: -2; width: calc(100% + 48px); height: calc(100% + 48px); object-fit: cover; object-position: center 48%; filter: blur(3px) brightness(.44) saturate(.74); transform: perspective(1100px) rotateX(var(--camera-tilt-x, 0deg)) rotateY(var(--camera-tilt-y, 0deg)) scale(1.04); transform-origin: center; transition: transform .25s ease-out; will-change: transform; opacity: 0; animation: backdrop-reveal 2.8s cubic-bezier(.2, .65, .25, 1) .1s both; }
+.hero-backdrop { position: absolute; inset: -24px; z-index: -2; width: calc(100% + 48px); height: calc(100% + 48px); object-fit: cover; object-position: center 38%; filter: blur(3px) brightness(.44) saturate(.74); transform: perspective(1100px) rotateX(var(--camera-tilt-x, 0deg)) rotateY(var(--camera-tilt-y, 0deg)) scale(1.04); transform-origin: center; transition: transform .25s ease-out; will-change: transform; opacity: 0; animation: backdrop-reveal 2.8s cubic-bezier(.2, .65, .25, 1) .1s both; }
 .hero-flash { position: absolute; inset: 0; z-index: 4; background: radial-gradient(circle at 50% 42%, #fff 0%, rgba(255,255,255,.98) 32%, rgba(255,255,255,.84) 68%, rgba(255,255,255,.62) 100%), linear-gradient(90deg, rgba(255,255,255,.76), rgba(255,255,255,.94) 50%, rgba(255,255,255,.76)); opacity: 0; pointer-events: none; filter: saturate(1.25); }
 .hero-flash.is-active { animation: camera-flash .16s ease-out both; }
 .hero-topline { position: absolute; top: 31px; left: 5.2%; right: 5.2%; display: flex; justify-content: space-between; align-items: start; color: rgba(245, 242, 235, .8); font-size: 9px; letter-spacing: .18em; opacity: 0; animation: subtitle-appear .9s ease .55s forwards; }
@@ -151,6 +151,7 @@ button { cursor: pointer; }
 
 @media (max-width: 600px) {
   .hero { min-height: 580px; }
+  .hero-backdrop { object-position: center 48%; }
   .camera-motion-button { display: grid; }
   .hero-topline { top: 22px; left: 22px; right: 22px; font-size: 8px; }
   .hero-logo { top: 50%; transform: translateY(-50%); }
