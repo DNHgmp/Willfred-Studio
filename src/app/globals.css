@@ -142,6 +142,7 @@ button { cursor: pointer; }
 }
 
 @media (max-width: 850px) {
+  .hero { height: 100vh; height: 100dvh; min-height: 0; }
   .content-wrap { width: calc(100% - 72px); }
   .portfolio-section { width: calc(100vw - 64px); }
   .gallery-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2px; }
@@ -150,7 +151,6 @@ button { cursor: pointer; }
 }
 
 @media (max-width: 600px) {
-  .hero { height: 82svh; min-height: 520px; }
   .hero-backdrop { object-position: center 48%; }
   .camera-motion-button { display: grid; }
   .hero-topline { top: 22px; left: 22px; right: 22px; font-size: 8px; }
