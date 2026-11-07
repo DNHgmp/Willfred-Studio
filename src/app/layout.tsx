@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   description:
     "Fotografía de bodas, quinceañeras, eventos y retrato de estudio. Willfred Studio captura historias con una mirada personal y cinematográfica.",
   applicationName: "Willfred Studio Photography",
-  metadataBase: new URL("https://wilfred-studio.pages.dev"),
+  metadataBase: new URL("https://willfred-studio.pages.dev"),
   openGraph: {
     title: "Willfred Studio Photography",
     description: "Fotografía con una mirada personal y cinematográfica.",
     type: "website",
     locale: "es_MX",
-    url: "https://wilfred-studio.pages.dev",
+    url: "https://willfred-studio.pages.dev",
     images: [
       {
         url: "/og-image.jpg",
