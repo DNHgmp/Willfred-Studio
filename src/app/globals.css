@@ -31,7 +31,7 @@ button { cursor: pointer; }
 .hero-topline a:hover { color: var(--gold); }
 .hero-topline a span { margin-left: 6px; color: var(--gold); }
 .hero-logo { position: absolute; z-index: 2; top: 50%; left: 20px; right: 20px; text-align: center; transform: translateY(-50%); }
-.hero-title { display: table; max-width: 100%; overflow: hidden; margin: 0 auto; color: #f5f2eb; font: 400 clamp(58px, 8.2vw, 112px)/.95 var(--font-display); letter-spacing: .015em; white-space: nowrap; text-shadow: none; clip-path: inset(0 100% 0 0); opacity: 0; filter: none; animation: logo-light-reveal 1.35s steps(15, end) .45s forwards; }
+.hero-title { display: table; max-width: 100%; overflow: hidden; margin: 0 auto; color: #f5f2eb; font: 400 clamp(58px, 8.2vw, 112px)/.95 var(--font-display); letter-spacing: .015em; white-space: nowrap; text-shadow: none; clip-path: inset(0 100% 0 0); opacity: 0; filter: none; animation: logo-light-reveal 1.7s cubic-bezier(.62, .05, .2, 1) .55s forwards; }
 .hero-subtitle { margin: 17px 0 0; color: rgba(245, 242, 235, .88); font-size: 10px; font-weight: 400; letter-spacing: .42em; opacity: 0; animation: subtitle-appear 1.1s ease 2.65s forwards; }
 .hero-services { color: rgba(245, 242, 235, .74); font-size: 7px; font-weight: 400; letter-spacing: .15em; opacity: 0; animation: subtitle-appear 1s ease .25s forwards; }
 .hero-services i { padding: 0 5px; color: var(--gold); font-style: normal; }
@@ -207,7 +207,7 @@ button { cursor: pointer; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
-  .hero-title { animation: logo-light-reveal .6s steps(15, end) .1s forwards !important; filter: none !important; }
+  .hero-title { animation: logo-light-reveal 1.7s cubic-bezier(.62, .05, .2, 1) .55s forwards !important; filter: none !important; }
   .hero-backdrop { opacity: 1 !important; filter: blur(3px) brightness(.44) saturate(.74) !important; transform: scale(1.04) !important; }
   .hero-flash.is-active { display: block; animation: camera-flash-reduced .16s ease-out both !important; }
   .hero-topline, .scroll-cue { opacity: 1 !important; }
