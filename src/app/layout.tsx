@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     url: "https://wilfred-studio.pages.dev",
     images: [
       {
-        url: "/og-image.svg",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Willfred Studio Photography",
+        alt: "Willfred Studio, fotógrafo con su cámara",
       },
     ],
   },
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Willfred Studio Photography",
     description: "Fotografía con una mirada personal y cinematográfica.",
-    images: ["/og-image.svg"],
+    images: ["/og-image.jpg"],
   },
 };
 
