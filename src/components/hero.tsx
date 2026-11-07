@@ -83,7 +83,7 @@ export function Hero() {
       <img
         className="hero-backdrop"
         ref={backgroundRef}
-        src="/hero-photo.jpg"
+        src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&amp;fit=crop&amp;w=2000&amp;q=85"
         alt=""
         aria-hidden="true"
         fetchPriority="high"
